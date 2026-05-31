@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Braille Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>👁️‍🗨️ Braille Vision</h1>
+        <p>Real-Time Braille to Speech & Text Conversion</p>
+
+        <video id="video" autoplay playsinline></video>
+
+        <canvas id="canvas" style="display:none;"></canvas>
+
+        <div class="buttons">
+            <button id="startBtn">Start Camera</button>
+            <button id="captureBtn">Capture Image</button>
+        </div>
+
+        <h3 class="capture-heading">Captured Image</h3>
+        <img id="preview">
+
+        <div class="result-box">
+            <h3>Detected Text</h3>
+            <textarea id="resultText" readonly></textarea>
+        </div>
+
+        <div class="camera-placeholder">
+            📷 Camera Preview Will Appear Here
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
